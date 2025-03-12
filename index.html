@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bankacılık Başvuru Formu</title>
+    <title>Başvuru Formu</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
     <style>
         :root {
             --color-background: #e7e7e7;
-            --color-background-alt: #ba5ed7;
             --color-border-active: #a94bc3;
             --color-border-default: #d1d1d1;
-            --color-highlight: #e2b6f1;
             --color-primary: #86319a;
             --color-primary-active: #5e2768;
             --color-text-default: #262626;
@@ -25,7 +23,7 @@
             font-family: var(--font-family-body);
             background-color: var(--color-background);
             padding: 20px;
-            max-width: 600px;
+            max-width: 500px;
             margin: auto;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -55,7 +53,6 @@
         }
 
         .fs-input,
-        .fs-select,
         .fs-textarea {
             border-radius: 8px;
             border: 1px solid var(--color-border-default);
@@ -66,7 +63,6 @@
         }
 
         .fs-input:focus,
-        .fs-select:focus,
         .fs-textarea:focus {
             border-color: var(--color-border-active);
         }
@@ -99,140 +95,41 @@
 </head>
 <body>
 
-    <h1>Bankacılık Başvuru Formu</h1>
+    <h1>Başvuru Formu</h1>
 
     <form
         action="https://formspree.io/f/{FORM_ID}"
-        class="fs-form fs-layout__2-column"
+        class="fs-form"
         target="_top"
         method="POST"
     >
         <fieldset>
             <div class="fs-field">
-                <label class="fs-label" for="name">Tam Adınız</label>
+                <label class="fs-label" for="name">Ad Soyad</label>
                 <input class="fs-input" id="name" name="name" required />
             </div>
             <div class="fs-field">
-                <label class="fs-label" for="dob">Doğum Tarihi</label>
+                <label class="fs-label" for="phone">Telefon Numarası</label>
                 <input
                     class="fs-input"
-                    id="dob"
-                    name="dob"
-                    placeholder="GG-AA-YYYY"
+                    id="phone"
+                    name="phone"
+                    placeholder="(000) 000-0000"
                     required
                 />
             </div>
-        </fieldset>
-        
-        <fieldset>
-            <div class="fs-field">
-                <label class="fs-label" for="address-1">Adres 1</label>
-                <input class="fs-input" id="address-1" name="address-1" required />
-            </div>
-            <div class="fs-field">
-                <label class="fs-label" for="address-2">Adres 2</label>
-                <input class="fs-input" id="address-2" name="address-2" />
-            </div>
-            <div class="fs-field">
-                <label class="fs-label" for="city">Şehir</label>
-                <input class="fs-input" id="city" name="city" required />
-            </div>
-            <div class="fs-field">
-                <label class="fs-label" for="state">Eyalet / İl</label>
-                <input class="fs-input" id="state" name="state" required />
-            </div>
-            <div class="fs-field">
-                <label class="fs-label" for="zip-code">Posta Kodu</label>
-                <input class="fs-input" id="zip-code" name="zip-code" required />
-            </div>
-        </fieldset>
-        
-        <fieldset>
             <div class="fs-field">
                 <label class="fs-label" for="email">E-posta</label>
                 <input class="fs-input" id="email" name="email" required />
             </div>
             <div class="fs-field">
-                <label class="fs-label" for="number">İletişim Numarası</label>
-                <input
-                    class="fs-input"
-                    id="number"
-                    name="number"
-                    placeholder="(000) 000-0000"
-                    required
-                />
-            </div>
-        </fieldset>
-        
-        <fieldset>
-            <div class="fs-field">
-                <label class="fs-label" for="previous-company">Son Çalıştığınız Şirket</label>
-                <input class="fs-input" id="previous-company" name="previous-company" />
-            </div>
-            <div class="fs-field">
-                <label class="fs-label" for="previous-role">Son Göreviniz</label>
-                <input class="fs-input" id="previous-role" name="previous-role" />
-            </div>
-            <div class="fs-field">
-                <label class="fs-label" for="latest-role-start-date">Başlangıç Tarihi</label>
-                <input
-                    class="fs-input"
-                    id="latest-role-start-date"
-                    name="latest-role-start-date"
-                    placeholder="AA-YYYY"
-                />
-                <p class="fs-description">Son görevinize ne zaman başladınız?</p>
-            </div>
-            <div class="fs-field">
-                <label class="fs-label" for="latest-role-end-date">Bitiş Tarihi</label>
-                <input
-                    class="fs-input"
-                    id="latest-role-end-date"
-                    name="latest-role-end-date"
-                    placeholder="AA-YYYY. Halen bu görevde iseniz boş bırakın."
-                />
-                <p class="fs-description">Son görevinizin bitiş tarihi</p>
-            </div>
-            <div class="fs-field">
-                <label class="fs-label" for="role-description">Görev Tanımı</label>
+                <label class="fs-label" for="notes">Notlar (isteğe bağlı)</label>
                 <textarea
                     class="fs-textarea"
-                    id="role-description"
-                    name="role-description"
+                    id="notes"
+                    name="notes"
+                    rows="4"
                 ></textarea>
-                <p class="fs-description">Son görevinizde neler yaptığınızı açıklayın.</p>
-            </div>
-        </fieldset>
-        
-        <fieldset>
-            <div class="fs-field">
-                <label class="fs-label" for="position">Başvurmak İstediğiniz Pozisyon</label>
-                <select class="fs-select" id="position" name="position">
-                    <option value="bank-teller">Banko Görevlisi</option>
-                    <option value="loan-officer">Kredi Uzmanı</option>
-                    <option value="financial-analyst">Finansal Analist</option>
-                    <option value="customer-service-representative">Müşteri Hizmetleri Temsilcisi</option>
-                </select>
-            </div>
-            <div class="fs-field">
-                <label class="fs-label" for="start-date">Ne zaman başlayabilirsiniz?</label>
-                <input
-                    class="fs-input"
-                    id="start-date"
-                    name="start-date"
-                    placeholder="GG-AA-YYYY"
-                    required
-                />
-            </div>
-            <div class="fs-field">
-                <label class="fs-label" for="referral-source">Bizi nasıl duydunuz?</label>
-                <select class="fs-select" id="referral-source" name="referral-source">
-                    <option value="search-engines">Arama Motorları (Google, Bing, vb.)</option>
-                    <option value="social-media">Sosyal Medya</option>
-                    <option value="company-website">Şirket Web Sitesi</option>
-                    <option value="jobs-board">İş İlanı Siteleri</option>
-                    <option value="referral">Tavsiye</option>
-                </select>
             </div>
         </fieldset>
         
