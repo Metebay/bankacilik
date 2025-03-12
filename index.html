@@ -1,0 +1,139 @@
+<form
+  action="https://formspree.io/f/{FORM_ID}"
+  class="fs-form fs-layout__2-column"
+  target="_top"
+  method="POST"
+>
+  <fieldset>
+    <div class="fs-field">
+      <label class="fs-label" for="name">Tam Adınız</label>
+      <input class="fs-input" id="name" name="name" required />
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="dob">Doğum Tarihi</label>
+      <input
+        class="fs-input"
+        id="dob"
+        name="dob"
+        placeholder="GG-AA-YYYY"
+        required
+      />
+    </div>
+  </fieldset>
+  
+  <fieldset>
+    <div class="fs-field">
+      <label class="fs-label" for="address-1">Adres 1</label>
+      <input class="fs-input" id="address-1" name="address-1" required />
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="address-2">Adres 2</label>
+      <input class="fs-input" id="address-2" name="address-2" />
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="city">Şehir</label>
+      <input class="fs-input" id="city" name="city" required />
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="state">Eyalet / İl</label>
+      <input class="fs-input" id="state" name="state" required />
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="zip-code">Posta Kodu</label>
+      <input class="fs-input" id="zip-code" name="zip-code" required />
+    </div>
+  </fieldset>
+  
+  <fieldset>
+    <div class="fs-field">
+      <label class="fs-label" for="email">E-posta</label>
+      <input class="fs-input" id="email" name="email" required />
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="number">İletişim Numarası</label>
+      <input
+        class="fs-input"
+        id="number"
+        name="number"
+        placeholder="(000) 000-0000"
+        required
+      />
+    </div>
+  </fieldset>
+  
+  <fieldset>
+    <div class="fs-field">
+      <label class="fs-label" for="previous-company">Son Çalıştığınız Şirket</label>
+      <input class="fs-input" id="previous-company" name="previous-company" />
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="previous-role">Son Göreviniz</label>
+      <input class="fs-input" id="previous-role" name="previous-role" />
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="latest-role-start-date">Başlangıç Tarihi</label>
+      <input
+        class="fs-input"
+        id="latest-role-start-date"
+        name="latest-role-start-date"
+        placeholder="AA-YYYY"
+      />
+      <p class="fs-description">Son görevinize ne zaman başladınız?</p>
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="latest-role-end-date">Bitiş Tarihi</label>
+      <input
+        class="fs-input"
+        id="latest-role-end-date"
+        name="latest-role-end-date"
+        placeholder="AA-YYYY. Halen bu görevdeyseniz boş bırakın."
+      />
+      <p class="fs-description">Son görevinizin bitiş tarihi</p>
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="role-description">Görev Tanımı</label>
+      <textarea
+        class="fs-textarea"
+        id="role-description"
+        name="role-description"
+      ></textarea>
+      <p class="fs-description">Son görevinizde neler yaptığınızı açıklayın.</p>
+    </div>
+  </fieldset>
+  
+  <fieldset>
+    <div class="fs-field">
+      <label class="fs-label" for="position">Başvurmak İstediğiniz Pozisyon</label>
+      <select class="fs-select" id="position" name="position">
+        <option value="bank-teller">Banko Görevlisi</option>
+        <option value="loan-officer">Kredi Uzmanı</option>
+        <option value="financial-analyst">Finansal Analist</option>
+        <option value="customer-service-representative">Müşteri Hizmetleri Temsilcisi</option>
+      </select>
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="start-date">Ne zaman başlayabilirsiniz?</label>
+      <input
+        class="fs-input"
+        id="start-date"
+        name="start-date"
+        placeholder="GG-AA-YYYY"
+        required
+      />
+    </div>
+    <div class="fs-field">
+      <label class="fs-label" for="referral-source">Bizi nasıl duydunuz?</label>
+      <select class="fs-select" id="referral-source" name="referral-source">
+        <option value="search-engines">Arama Motorları (Google, Bing, vb.)</option>
+        <option value="social-media">Sosyal Medya</option>
+        <option value="company-website">Şirket Web Sitesi</option>
+        <option value="jobs-board">İş İlanı Siteleri</option>
+        <option value="referral">Tavsiye</option>
+      </select>
+    </div>
+  </fieldset>
+  
+  <div class="fs-button-group">
+    <button class="fs-button" type="submit">Gönder</button>
+  </div>
+</form>
